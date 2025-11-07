@@ -15,10 +15,9 @@ import {
     BlockTitle,
     Button,
     Icon,
-    PreviewCard,
+    PreviewCard, RToast,
 } from "@/components";
 // import {login} from "@/api/auth";
-// import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
 
 const Login = () => {
     const [loading, setLoading] = useState(false);
@@ -28,11 +27,10 @@ const Login = () => {
 
     const onFormSubmit = async (formData) => {
         setLoading(true);
-        // if (!executeRecaptcha) {
-        //     console.log('Execute recaptcha not yet available');
-        //     return;
-        // }
-        // formData["g-recaptcha-response"] = await executeRecaptcha('submit');
+        RToast('Berhasil masuk, anda akan di alihahkan dalam 2 detik', 'success');
+        setTimeout(() => {
+            navigate("/siswa");
+        }, 200);
         // login(formData).then(() => {
         //     navigate("/");
         //     setLoading(false);
@@ -54,25 +52,25 @@ const Login = () => {
             <PreviewCard className="card-bordered" bodyClass="card-inner-lg">
                 <BlockHead>
                     <BlockContent>
-                        <BlockTitle tag="h4">SIMADU</BlockTitle>
+                        <BlockTitle tag="h4">MASUK</BlockTitle>
                         <BlockDes>
-                            <p>Akses SIMADU menggunakan email dan kode sandi Anda.</p>
+                            <p>Akses Sistem PMB Yayasan Darul Hikmah.</p>
                         </BlockDes>
                     </BlockContent>
                 </BlockHead>
                 <Form className="is-alter" onSubmit={handleSubmit(onFormSubmit)}>
                     <div className="form-group">
                         <div className="form-label-group">
-                            <label className="form-label" htmlFor="username">
-                                Nama Pengguna
+                            <label className="form-label" htmlFor="email">
+                                Alamat Email
                             </label>
                         </div>
                         <div className="form-control-wrap">
                             <input
                                 type="text"
-                                id="username"
-                                {...register('username', { required: "Kolom ini tidak boleh kosong" })}
-                                placeholder="Masukkan nama pengguna anda"
+                                id="email"
+                                {...register('email', { required: "Kolom ini tidak boleh kosong" })}
+                                placeholder="Masukkan alamat email anda"
                                 className="form-control-lg form-control" />
                             {errors.name && <span className="invalid">{errors.name.message}</span>}
                         </div>

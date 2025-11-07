@@ -5,7 +5,7 @@ import {Navigate, Outlet} from "react-router-dom";
 const PrivateRoute = () => {
     // const api = new APICore();
     const api = {
-        isUserAuthenticated: false
+        isUserAuthenticated: true
     }
     return (
         api.isUserAuthenticated === false ? <Navigate to={"/auth/masuk"} /> : <Outlet/>

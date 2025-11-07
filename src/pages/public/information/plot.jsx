@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "@/layout/head";
-import Content from "@/layout/content/index.jsx";
+import Content from "@/layout/content";
 
-const PublicAnnouncement = () => {
+const Plot = () => {
     return (
         <React.Fragment>
-            <Head title={"Halaman Pengumuman"} />
+            <Head title={"Halaman Alur Pelaksanaan"} />
             <Content>
                 Halaman Pengumuman
             </Content>
@@ -13,4 +13,4 @@ const PublicAnnouncement = () => {
     )
 }
 
-export default PublicAnnouncement;
+export default Plot;

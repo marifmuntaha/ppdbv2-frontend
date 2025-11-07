@@ -352,7 +352,50 @@ const HeadMenu = [
             },
         ],
     },
-]
+];
+const StudentMenu = [
+    {
+        icon: "monitor",
+        text: "Dashboard",
+        link: "/siswa",
+    },
+    {
+        icon: "file",
+        text: "Pendaftaran",
+        active: false,
+        subMenu: [
+            {
+                text: "Data Pribadi",
+                link: "/siswa/pendaftaran/data-pribadi",
+            },
+            {
+                text: "Program Pilihan",
+                link: "/siswa/pendaftaran/data-pribadi",
+            },
+            {
+                text: "Data Orangtua",
+                link: "/siswa/pendaftaran/data-orangtua",
+            },
+            {
+                text: "Data Alamat",
+                link: "/siswa/pendaftaran/data-alamat",
+            },
+            {
+                text: "Data Bantuan",
+                link: "/siswa/pendaftaran/data-bantuan",
+            },
+            {
+                text: "Sekolah Asal",
+                link: "/siswa/pendaftaran/sekolah-asal",
+            },
+        ],
+    },
+    {
+        icon: "download",
+        text: "Unduhan",
+        link: "/unduhan",
+    },
+];
 const PublicMenu = [
     {
         icon: "monitor",
@@ -365,9 +408,27 @@ const PublicMenu = [
         link: "/data-pendaftar",
     },
     {
-        icon: "bell",
-        text: "Pengumuman",
-        link: "/pengumuman",
+        icon: "info",
+        text: "Informasi",
+        active: false,
+        subMenu: [
+            {
+                text: "Jadwal Pelaksanaan",
+                link: "/informasi/jadwal-pelaksanaan",
+            },
+            {
+                text: "Lokasi Pendaftaran",
+                link: "/informasi/lokasi-pendaftaran",
+            },
+            {
+                text: "Alur Pelaksanaan",
+                link: "/informasi/alur-pelaksanaan",
+            },
+            {
+                text: "Daya Tampung",
+                link: "/informasi/daya-tampung",
+            },
+        ],
     },
     {
         icon: "download",
@@ -375,4 +436,4 @@ const PublicMenu = [
         link: "/unduhan",
     },
 ];
-export {RootMenu, PublicMenu, OperatorMenu, HeadMenu} ;
+export {RootMenu, PublicMenu, OperatorMenu, HeadMenu, StudentMenu} ;

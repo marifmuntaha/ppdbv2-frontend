@@ -38,7 +38,7 @@ const PublicDashboard = () => {
                             </div>
                         </section>
                         <section className="registration-section">
-                            <h2 className="section-title slide-in">JENJANG DAN JALUR PENDAFTARAN</h2>
+                            <h2 className="section-title slide-in">DATA PENDAFTARAN</h2>
                             <div className="jenjang-grid">
                                 <div className="jenjang-card fade-in">
                                     <div className="jenjang-header">
@@ -46,7 +46,7 @@ const PublicDashboard = () => {
                                     </div>
                                     <div className="jenjang-content">
                                         <div className="jalur-count">
-                                            <span className="count">2</span>
+                                            <span className="count">90</span>
                                             <span className="label">Jalur Pendaftaran</span>
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@ const PublicDashboard = () => {
                                     </div>
                                     <div className="jenjang-content">
                                         <div className="jalur-count">
-                                            <span className="count">2</span>
+                                            <span className="count">160</span>
                                             <span className="label">Jalur Pendaftaran</span>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@ const PublicDashboard = () => {
                                     </div>
                                     <div className="jenjang-content">
                                         <div className="jalur-count">
-                                            <span className="count">2</span>
+                                            <span className="count">190</span>
                                             <span className="label">Jalur Pendaftaran</span>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@ const PublicDashboard = () => {
                                     </div>
                                     <div className="jenjang-content">
                                         <div className="jalur-count">
-                                            <span className="count">2</span>
+                                            <span className="count">100</span>
                                             <span className="label">Jalur Pendaftaran</span>
                                         </div>
                                     </div>

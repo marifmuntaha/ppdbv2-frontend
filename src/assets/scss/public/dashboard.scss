@@ -1,6 +1,6 @@
 // PPDB.scss
 // Variables
-$primary-color: #88ca8e;
+$primary-color: #1ee0ac;
 $secondary-color: #4c7cd3;
 $success-color: #28a745;
 $success-light: #20c997;
@@ -195,7 +195,7 @@ body {
 
   .jenjang-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 

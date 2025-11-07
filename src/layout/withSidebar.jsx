@@ -1,6 +1,6 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
-import {RootMenu, PublicMenu, OperatorMenu, HeadMenu} from "./sidebar/MenuData";
+import {RootMenu, PublicMenu, OperatorMenu, HeadMenu, StudentMenu} from "./sidebar/MenuData";
 import Sidebar from "./sidebar";
 import Head from "./head";
 import Header from "./header";
@@ -13,13 +13,19 @@ import AppWrap from "./global/AppWrap";
 const WithSidebar = ({title, ...props}) => {
     // const api = new APICore();
     // const user = api.getLoggedInUser();
-    const user = null
+    const user = {
+        role: 5,
+        name: 'Achmad Wikramawardhana',
+        email: 'achmadwikramawardhana@gmail.com'
+    }
     const menu = () => {
         switch (user?.role) {
             case '1':
                 return RootMenu
             case '2':
                 return OperatorMenu
+            case 5:
+                return StudentMenu
             case '6':
                 return HeadMenu
             default:

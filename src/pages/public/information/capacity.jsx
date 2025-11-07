@@ -6,43 +6,41 @@ import {
     BlockBetween,
     BlockHead,
     BlockHeadContent,
-    BlockTitle, Button,
-    Col, Icon,
+    BlockTitle,
+    Col,
     PreviewCard, ReactDataTable, Row,
 } from "@/components";
 
-const PublicDownload = () => {
+const Capacity = () => {
     const Columns = [
         {
-            name: "Nama Berkas",
+            name: "Nama Lembaga",
             selector: (row) => row.name,
             sortable: false,
             width: "600px",
         },
         {
-            name: "Aksi",
-            selector: () => (
-                <Button size="sm" outline color="info"><Icon name="download"/></Button>
-            ),
+            name: "Daya Tampung",
+            selector: (row) => row.capacity + ' Siswa',
             sortable: false,
 
         },
     ];
     const locations = [
-        {id: 1, name: 'Brosur RA Darul Hikmah', file: 'https://localhost:8000/2000.pdf'},
-        {id: 2, name: 'Brosur MI PTQ Darul Hikmah', file: 'https://localhost:8000/2000.pdf'},
-        {id: 3, name: 'Brosur MTs Darul Hikmah', file: 'https://localhost:8000/2000.pdf'},
-        {id: 4, name: 'Brosur MA Darul Hikmah', file: 'https://localhost:8000/2000.pdf'},
+        {id: 1, name: 'RA Darul Hikmah', capacity: 100},
+        {id: 2, name: 'MI PTQ Darul Hikmah', capacity: 175},
+        {id: 3, name: 'MTs Darul Hikmah', capacity: 350},
+        {id: 4, name: 'MA Darul Hikmah', capacity: 250},
     ]
     return (
         <React.Fragment>
-            <Head title="Unduhan" />
+            <Head title="Daya Tampung" />
             <Content>
                 <Block size="lg">
                     <BlockHead>
                         <BlockBetween>
                             <BlockHeadContent>
-                                <BlockTitle tag="h4">Unduhan</BlockTitle>
+                                <BlockTitle tag="h4">Daya Tampung</BlockTitle>
                                 <p>
                                     Just import <code>ReactDataTable</code> from <code>components</code>, it is built in
                                     for react dashlite.
@@ -63,4 +61,4 @@ const PublicDownload = () => {
     )
 }
 
-export default PublicDownload;
+export default Capacity;

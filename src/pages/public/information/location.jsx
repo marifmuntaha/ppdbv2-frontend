@@ -1,4 +1,5 @@
 import React from "react";
+import {ButtonGroup} from "reactstrap";
 import Head from "@/layout/head";
 import Content from "@/layout/content";
 import {
@@ -6,43 +7,53 @@ import {
     BlockBetween,
     BlockHead,
     BlockHeadContent,
-    BlockTitle, Button,
-    Col, Icon,
-    PreviewCard, ReactDataTable, Row,
+    BlockTitle,
+    Button, Col,
+    Icon, PreviewCard, ReactDataTable, Row
 } from "@/components";
 
-const PublicDownload = () => {
+const Location = () => {
     const Columns = [
         {
-            name: "Nama Berkas",
+            name: "Nama Lembaga",
             selector: (row) => row.name,
             sortable: false,
-            width: "600px",
+            width: "250px",
         },
         {
-            name: "Aksi",
-            selector: () => (
-                <Button size="sm" outline color="info"><Icon name="download"/></Button>
-            ),
+            name: "Alamat",
+            selector: (row) => row.address,
             sortable: false,
+            width: "500px",
 
+        },
+        {
+            name: "",
+            selector: () => (
+                <ButtonGroup size="sm">
+                    <Button outline color="success" onClick={() => {
+                        alert('testing')
+                    }}><Icon name="call"/> <span>Kontak</span></Button>
+                </ButtonGroup>
+            ),
+            sortable: false
         },
     ];
     const locations = [
-        {id: 1, name: 'Brosur RA Darul Hikmah', file: 'https://localhost:8000/2000.pdf'},
-        {id: 2, name: 'Brosur MI PTQ Darul Hikmah', file: 'https://localhost:8000/2000.pdf'},
-        {id: 3, name: 'Brosur MTs Darul Hikmah', file: 'https://localhost:8000/2000.pdf'},
-        {id: 4, name: 'Brosur MA Darul Hikmah', file: 'https://localhost:8000/2000.pdf'},
+        {id: 1, name: 'RA Darul Hikmah', address: 'Jl. Raya Jepara - Bugel KM 07 Menganti Kedung Jepara', phone: '082229366506'},
+        {id: 2, name: 'MI PTQ Darul Hikmah', address: 'Jl. Raya Jepara - Bugel KM 07 Menganti Kedung Jepara', phone: '082229366506'},
+        {id: 3, name: 'MTs Darul Hikmah', address: 'Jl. Raya Jepara - Bugel KM 07 Menganti Kedung Jepara', phone: '082229366506'},
+        {id: 4, name: 'MA Darul Hikmah', address: 'Jl. Raya Jepara - Bugel KM 07 Menganti Kedung Jepara', phone: '082229366506'},
     ]
     return (
         <React.Fragment>
-            <Head title="Unduhan" />
+            <Head title="Lokasi Pendaftaran" />
             <Content>
                 <Block size="lg">
                     <BlockHead>
                         <BlockBetween>
                             <BlockHeadContent>
-                                <BlockTitle tag="h4">Unduhan</BlockTitle>
+                                <BlockTitle tag="h4">Lokasi Pendaftaran</BlockTitle>
                                 <p>
                                     Just import <code>ReactDataTable</code> from <code>components</code>, it is built in
                                     for react dashlite.
@@ -63,4 +74,4 @@ const PublicDownload = () => {
     )
 }
 
-export default PublicDownload;
+export default Location;

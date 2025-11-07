@@ -72,7 +72,7 @@ export const role = (roleId) => {
             return "Bendahara"
         case '4':
             return "Teller"
-        case '5':
+        case 5:
             return "Siswa"
         default:
             return "Pengunjung"

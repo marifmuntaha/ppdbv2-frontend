@@ -1,13 +1,13 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { Spinner } from "reactstrap";
 import Logo from "@/images/logo.png";
 import LogoDark from "@/images/logo-dark.png";
 import Head from "@/layout/head";
 import AuthFooter from "@/layout/footer/auth";
 import { Block, BlockContent, BlockDes, BlockHead, BlockTitle, Button, PreviewCard } from "@/components";
-import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form";
 // import {forgotPassword} from "@/api/auth";
-import {Spinner} from "reactstrap";
 
 const ForgotPassword = () => {
     const [loading, setLoading] = useState(false);
@@ -38,19 +38,19 @@ const ForgotPassword = () => {
                     <form className="is-alter" onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
                             <div className="form-label-group">
-                                <label className="form-label" htmlFor="username">Nama Pengguna</label>
+                                <label className="form-label" htmlFor="email">Alamat Email</label>
                             </div>
                             <input
                                 type="text"
                                 className="form-control form-control-lg"
-                                id="username"
+                                id="email"
                                 placeholder="Masukkan Nama Pengguna anda."
-                                {...register("username", {required: 'Nama Pengguna tidak boleh kosong.'})}
+                                {...register("email", {required: 'Alamat Email tidak boleh kosong.'})}
                             />
-                            {errors.username && <span className="invalid">{errors.username.message}</span>}
+                            {errors.email && <span className="invalid">{errors.email.message}</span>}
                         </div>
                         <div className="form-group">
-                            <Button color="primary" size="lg" className="btn-block">
+                            <Button color="success" size="lg" className="btn-block">
                                 {loading ? <Spinner size="sm"/> : 'KIRIM LINK RESET'}
                             </Button>
                         </div>
