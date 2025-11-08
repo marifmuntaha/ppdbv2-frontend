@@ -47,7 +47,7 @@ const PublicDashboard = () => {
                                     <div className="jenjang-content">
                                         <div className="jalur-count">
                                             <span className="count">90</span>
-                                            <span className="label">Jalur Pendaftaran</span>
+                                            <span className="label">Calon Siswa</span>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@ const PublicDashboard = () => {
                                     <div className="jenjang-content">
                                         <div className="jalur-count">
                                             <span className="count">160</span>
-                                            <span className="label">Jalur Pendaftaran</span>
+                                            <span className="label">Calon Siswa</span>
                                         </div>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ const PublicDashboard = () => {
                                     <div className="jenjang-content">
                                         <div className="jalur-count">
                                             <span className="count">190</span>
-                                            <span className="label">Jalur Pendaftaran</span>
+                                            <span className="label">Calon Siswa</span>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@ const PublicDashboard = () => {
                                     <div className="jenjang-content">
                                         <div className="jalur-count">
                                             <span className="count">100</span>
-                                            <span className="label">Jalur Pendaftaran</span>
+                                            <span className="label">Calon Siswa</span>
                                         </div>
                                     </div>
                                 </div>

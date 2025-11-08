@@ -370,7 +370,7 @@ const StudentMenu = [
             },
             {
                 text: "Program Pilihan",
-                link: "/siswa/pendaftaran/data-pribadi",
+                link: "/siswa/pendaftaran/program-pilihan",
             },
             {
                 text: "Data Orangtua",
@@ -391,9 +391,24 @@ const StudentMenu = [
         ],
     },
     {
-        icon: "download",
-        text: "Unduhan",
-        link: "/unduhan",
+        icon: "upload",
+        text: "Unggah Berkas",
+        link: "/siswa/unggah-berkas",
+    },
+    {
+        icon: "printer",
+        text: "Cetak Formulir",
+        link: "/siswa/cetak-formulir",
+    },
+    {
+        icon: "cc",
+        text: "Pembayaran",
+        link: "/siswa/pembayaran",
+    },
+    {
+        icon: "bell",
+        text: "Pengumuman",
+        link: "/siswa/pengumuman",
     },
 ];
 const PublicMenu = [

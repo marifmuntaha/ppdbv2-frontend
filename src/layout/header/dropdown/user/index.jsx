@@ -1,9 +1,9 @@
 import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import { DropdownToggle, DropdownMenu, Dropdown } from "reactstrap";
 import { LinkList, LinkItem, UserAvatar } from "@/components";
 import { useTheme, useThemeUpdate } from "@/layout/provider";
 import {role} from "@/utils";
-import {useNavigate} from "react-router-dom";
 
 const User = ({...props}) => {
     const {user} = props;
@@ -45,15 +45,6 @@ const User = ({...props}) => {
                 </div>
                 <div className="dropdown-inner">
                     <LinkList>
-                        <LinkItem link="/user-profile-regular" icon="user-alt" onClick={toggle}>
-                            View Profile
-                        </LinkItem>
-                        <LinkItem link="/user-profile-setting" icon="setting-alt" onClick={toggle}>
-                            Account Setting
-                        </LinkItem>
-                        <LinkItem link="/user-profile-activity" icon="activity-alt" onClick={toggle}>
-                            Login Activity
-                        </LinkItem>
                         <li>
                             <a className={`dark-switch ${theme.skin === 'dark' ? 'active' : ''}`} href="#"
                                onClick={(ev) => {
@@ -72,7 +63,7 @@ const User = ({...props}) => {
                 <div className="dropdown-inner">
                     <LinkList>
                         <LinkItem icon="signout" link={`#`} onClick={() => {
-                            logout({username: user.username}).then(() => {
+                            logout({email: user.email}).then(() => {
                                 navigate("/auth/keluar");
                             })
                         }}>

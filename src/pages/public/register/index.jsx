@@ -32,38 +32,38 @@ const PublicRegister = () => {
             name: "Jenjang",
             selector: (row) => row.institutionName,
             sortable: false,
-            width: '150px',
+            width: '100px',
         },
         {
             name: "Nama Siswa",
             selector: (row) => row.name,
             sortable: false,
+            width: '300px',
         },
         {
             name: "NISN",
             selector: (row) => row.nisn,
             sortable: false,
+            width: '150px',
 
         },
         {
             name: "Alamat",
             selector: (row) => row.address,
             sortable: false,
-            width: '400px'
+            width: '300px'
 
         },
         {
             name: "Program",
             selector: (row) => row.programName,
             sortable: false,
-            // hide: 370,
 
         },
         {
             name: "Boarding",
             selector: (row) => row.boardingName,
             sortable: false,
-            // hide: 370,
 
         },
     ];

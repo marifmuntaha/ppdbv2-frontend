@@ -21,6 +21,12 @@ import Plot from "@/pages/public/information/plot";
 import Capacity from "@/pages/public/information/capacity";
 import Letter from "@/pages/public/letter";
 import Signature from "@/pages/public/signature";
+import Personal from "@/pages/student/register/personal.jsx";
+import Program from "@/pages/student/register/program.jsx";
+import Parent from "@/pages/student/register/parent.jsx";
+import Address from "@/pages/student/register/address.jsx";
+import Scholarship from "@/pages/student/register/scholarship.jsx";
+import School from "@/pages/student/register/school.jsx";
 
 const ScrollToTop = (props) => {
     const location = useLocation();
@@ -41,6 +47,12 @@ const Router = () => {
                             <Route element={<WithSidebar/>}>
                                 <Route path="siswa">
                                     <Route index element={<StudentDashboard />}/>
+                                    <Route path="pendaftaran/data-pribadi" element={<Personal />}/>
+                                    <Route path="pendaftaran/program-pilihan" element={<Program />}/>
+                                    <Route path="pendaftaran/data-orangtua" element={<Parent />}/>
+                                    <Route path="pendaftaran/data-alamat" element={<Address />}/>
+                                    <Route path="pendaftaran/data-bantuan" element={<Scholarship />}/>
+                                    <Route path="pendaftaran/sekolah-asal" element={<School />}/>
                                 </Route>
                             </Route>
                         </Route>

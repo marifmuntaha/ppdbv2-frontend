@@ -32,7 +32,7 @@ const Header = ({ fixed, className, ...props }) => {
                         />
                     </div>
                     <div className="nk-header-brand d-xl-none">
-                        <Logo />
+                        <Logo user={user}/>
                     </div>
                     <div className="nk-header-tools">
                         <ul className="nk-quick-nav">

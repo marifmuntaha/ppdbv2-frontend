@@ -13,11 +13,7 @@ import AppWrap from "./global/AppWrap";
 const WithSidebar = ({title, ...props}) => {
     // const api = new APICore();
     // const user = api.getLoggedInUser();
-    const user = {
-        role: 5,
-        name: 'Achmad Wikramawardhana',
-        email: 'achmadwikramawardhana@gmail.com'
-    }
+    const user = null
     const menu = () => {
         switch (user?.role) {
             case '1':
